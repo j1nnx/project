@@ -1,3 +1,4 @@
+from datetime import datetime
 def mask_card_or_account(input_str):
     """принимает на вход строку информацией тип карты/счета и номер карты/счета"""
     def mask_card(card_num):
@@ -16,6 +17,9 @@ def mask_card_or_account(input_str):
     elif words[0].lower() == 'счет':
         return 'Счет ' + mask_account(words[1])
 
-    print(mask_card_or_account('Maestro 1596837868705199'))
-    print(mask_card_or_account('Счет 35383033474447895560'))
+
+def convert_data(input_data):
+    """функцию, которая принимает на вход строку, вида "2018-07-11T02:26:18.671407" и возвращает 11.07.2018"""
+    date_obj = datetime.strptime(input_data, "%Y-%m-%d %H:%M:%S.%f")
+    return date_obj.strftime('%d.%m.%Y')
 
