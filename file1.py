@@ -15,5 +15,6 @@ def mask_card_or_account(input_str):
         return words[0] + ' ' + ' '.join(words[1:-1]) + ' ' + mask_card(words[-1])
     elif words[0].lower() == 'счет':
         return 'Счет ' + mask_account(words[1])
-    1
+
+    print(mask_card_or_account('Maestro 1596837868705199'))
 
