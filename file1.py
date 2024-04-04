@@ -17,4 +17,5 @@ def mask_card_or_account(input_str):
         return 'Счет ' + mask_account(words[1])
 
     print(mask_card_or_account('Maestro 1596837868705199'))
+    print(mask_card_or_account('Счет 35383033474447895560'))
 
